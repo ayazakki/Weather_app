@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="shortcut icon" href="./imgs/weather.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark py-5">
+    <div class="container-fluid container-md  px-xl-5 ">
+      <div class="d-flex ">
+        <a href="#home"><img src="./imgs/logo@2x.png" class="logo me-3" alt="cloud logo"></a>
+        <div class="container-logo">
+          <a class="navbar-brand text-white d-block" href="#home">Weather</a>
+          <a href="#home"class=" tagline text-decoration-none">tagline goes here</a>
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center gap-2">
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cameras" href="#">Live cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Start home section(header) -->
+  <header id="home" class="py-5">
+    <div class="container-md text-center py-5 px-xl-5">
+      <div class="position-relative">
+        <input type="text" placeholder="Find your location..." id="cityInput">
+        <button class="btn position-absolute text-white find" id="findBtn">Find</button>
+      </div>
+      <div class="row py-5 gy-4">
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- Start footer -->
+  <footer class="pt-5 pb-3">
+    <div class="container-fluid container-md px-xl-5">
+      <div class="d-lg-flex justify-content-between align-items-center">
+        <div class="position-relative">
+          <input type="email" placeholder="Enter your email to subscribe...">
+          <button class="btn position-absolute text-white subscribe">Subscribe</button>
+        </div>
+        <div class="social-media mt-4 mt-lg-0 ">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+      <p class="text-secondary mt-5">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

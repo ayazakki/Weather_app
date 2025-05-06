@@ -1,0 +1,196 @@
+*{
+  font-family: "Roboto", sans-serif;
+}
+body{
+  background-color: #1e202b;
+}
+:root{
+  --theme-color:#009ad8;
+  --light-color:white;
+  --dark-color:black;
+}
+.navbar-brand{
+  padding-block: 0;
+}
+.container-logo{
+  line-height: 1.2;
+}
+a.tagline{
+  color: lightgray;
+  font-size: .625rem;
+}
+.logo{
+  width: 4.0625rem;
+  object-fit: contain;
+}
+.navbar-collapse{
+  margin-top: 1.875rem;
+  padding-block: .625rem;
+  background-color: #282c3b;
+}
+a.nav-link{
+  color: rgb(237, 236, 236);
+}
+.navbar-nav .nav-link.active{
+  color:var(--theme-color) ;
+  border-color:var(--theme-color);
+
+}
+a.nav-link:hover{
+  color:var(--light-color) ;
+}
+a.nav-link:focus{
+  color: var(--light-color);
+  border-block: .0625rem solid lightgray;
+}
+.fa-bars{
+  color: var(--light-color);
+  padding: .6875rem;
+  border: .125rem solid transparent;
+  border-radius: 1.875rem;
+  transition: color 0.5s,border-color 0.5s;
+}
+.fa-bars:hover{
+  color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+/* Start home section (header) */
+header{
+  position: relative;
+  min-height: 50vh;
+  padding-bottom: 1.25rem;
+}
+header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../imgs/banner.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  z-index: -1; 
+}
+header input, footer input{
+  width: 100%;
+  border-radius: 1.5625rem;
+  padding: .9375rem .625rem;
+  background-color: #1e202b;
+  color: var(--light-color);
+  border: 0;
+
+}
+header input:focus , footer input:focus{
+  outline:none;
+}
+.btn.find,.btn.subscribe{
+  width: 6.25rem;
+  padding: .5625rem;
+  border-radius: 1.5625rem;
+  right: .4375rem;
+  top: .25rem;
+  background-color: var(--theme-color);
+}
+.btn.find:active,.btn.subscribe:active{
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+.card{
+  color: lightgray;
+  border: none;
+}
+.card-header{
+  background-color: #2d303d;
+  border: none;
+}
+.card-body{
+  background-color: #323544;
+}
+.card-body h1{
+  font-size: 5rem;
+  color: var(--light-color);
+}
+.card-body .weather-states{
+  color: var(--theme-color);
+}
+.card-body h2{
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+.second-card{
+  background-color: #262936;
+}
+.condition-icon{
+  width: 5.625rem;
+}
+/* Start footer */
+footer{
+  background-color: #262936;
+}
+footer input::placeholder{
+  font-size: .875rem;
+}
+footer .social-media a{
+  color: var(--theme-color);
+  font-size: 1.25rem;
+  margin-right: .25rem;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  border-radius: 50%;
+  background-color: #1e202b;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.5s, background-color 0.5s;
+}
+footer .social-media a:hover{
+  background-color: var(--theme-color);
+  color: var(--light-color);
+}
+
+/* 
+Note that I grouped (.btn.subscribe) with (.btn.find)
+Also I grouped (footer input) with (header input)
+Also (footer input:focus) with (header input:focus)
+Also (.btn.subscribe:active) with (.btn.find:active)
+*/
+
+@media screen and (min-width:992px) {
+  .navbar-collapse{
+    margin-top: 0;
+    padding-block: 0;
+    background-color:transparent;
+  }
+  a.nav-link{
+    color: var(--light-color);
+    width: 5.625rem;
+    height: 1.6875rem;
+    padding-block: 0;
+    border: .125rem solid transparent;
+    border-radius: .9375rem;
+    transition: color 0.5s ,border-color 0.5s;
+  
+  }
+  a.nav-link.cameras{
+    width: 8.125rem;
+  } 
+  a.nav-link:hover{
+    color:var(--theme-color) ;
+    border-color:var(--theme-color);
+  }
+  a.nav-link:focus{
+  border-width:.0625rem;
+  border-color: var(--light-color);
+  color: var(--light-color);
+  }
+  footer div.position-relative{
+    width: 75%;
+  }
+}
+
