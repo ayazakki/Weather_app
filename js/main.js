@@ -10,7 +10,7 @@ cityInput.addEventListener("input",function(){
 })
 async function weatherAPI(query){
     try {
-      let res= await fetch(`http://api.weatherapi.com/v1/forecast.json?key=95b912a032664cb88ea132927252604&q=${query}&days=3`)
+      let res= await fetch(`https://api.weatherapi.com/v1/forecast.json?key=95b912a032664cb88ea132927252604&q=${query}&days=3`)
       let weatherData= await res.json()
       console.log(weatherData);
       display(weatherData)
@@ -120,7 +120,7 @@ function getUserLocation() {
         const { latitude, longitude } = position.coords;
         const query = `${latitude},${longitude}`;
         await weatherAPI(query);
-        let res= await fetch(`http://api.weatherapi.com/v1/forecast.json?key=95b912a032664cb88ea132927252604&q=${query}&days=3`)
+        let res= await fetch(`https://api.weatherapi.com/v1/forecast.json?key=95b912a032664cb88ea132927252604&q=${query}&days=3`)
         let data = await res.json();
         if (data.location && data.location.name) {
           cityInput.value = data.location.name;
