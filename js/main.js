@@ -128,11 +128,13 @@ function getUserLocation() {
       },
       (error) => {
         console.error("Geolocation error:", error);
+        alert("Unable to access your location. Defaulting to Cairo.");
         weatherAPI("Cairo");
       }
     );
   } else {
     console.error("Geolocation is not supported by this browser.");
+    alert("Geolocation is not supported by your browser. Defaulting to Cairo.");
     weatherAPI("Cairo");
   }
 }
