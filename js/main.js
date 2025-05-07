@@ -128,7 +128,7 @@ function getUserLocation() {
       },
       (error) => {
         console.error("Geolocation error:", error);
-        alert("Unable to access your location. Defaulting to Cairo.");
+        alert("Unable to access your location. Please enable location access on your phone.");
         weatherAPI("Cairo");
       }
     );
